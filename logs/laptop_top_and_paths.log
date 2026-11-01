@@ -1,0 +1,17 @@
+TOP 10 new predictions:
+  {'gene': 'SMAD3', 'score': 0.9616}
+  {'gene': 'CCND1', 'score': 0.9609}
+  {'gene': 'RARA', 'score': 0.9596}
+  {'gene': 'MAPK1', 'score': 0.9573}
+  {'gene': 'NCOA3', 'score': 0.9568}
+  {'gene': 'PSMB4', 'score': 0.9567}
+  {'gene': 'CCND2', 'score': 0.955}
+  {'gene': 'TGFBR2', 'score': 0.9546}
+  {'gene': 'PTEN', 'score': 0.9538}
+  {'gene': 'RUNX2', 'score': 0.9537}
+
+Why SOX2?
+  SOX2 --[bioprocess_protein]--> neuronal stem cell population maintenance --[bioprocess_bioprocess]--> stem cell population maintenance  (confidence 0.92)
+
+Why KLF4?
+  no path within 3 hops

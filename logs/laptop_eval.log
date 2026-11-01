@@ -1,0 +1,10 @@
+Rediscovery: 3 held-out genes (4 edges), ranked among 27,531 genes with no known link to the targets
+
+gene              model rank     degree baseline    random
+SOX2            207 (top  0.8%)               1,023    13,766
+POU5F1          680 (top  2.5%)               8,287    13,766
+KLF4            455 (top  1.7%)               1,099    13,766
+
+hits@10   model 0/3   degree 0/3
+hits@50   model 0/3   degree 0/3
+hits@100  model 0/3   degree 0/3

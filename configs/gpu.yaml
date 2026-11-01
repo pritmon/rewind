@@ -1,0 +1,39 @@
+# Full-size run on one 80 GB GPU (H100 / A100). For 4 GPUs: torchrun --nproc_per_node=4 -m rewind.train --config configs/gpu.yaml
+# Memory: autograd keeps ~num_layers * num_bases tensors of message_edges x dim floats,
+# i.e. 2 * 8 * 2M * 256 * 4 B ≈ 33 GB, which leaves headroom on 80 GB.
+data:
+  csv: data/kg.csv
+  processed: data/primekg.pt
+
+holdout:
+  genes: [POU5F1, SOX2, KLF4, MYC]
+  targets:
+    - stem cell population maintenance
+    - somatic stem cell population maintenance
+    - cellular senescence
+    - cell aging
+  relation: bioprocess_protein
+  # Also hide links to ontology neighbours of the targets (e.g. "neuronal stem cell population
+  # maintenance"), so a near-synonym cannot hand the model the hidden answer. 0 disables.
+  expand_hops: 1
+
+model:
+  dim: 256
+  num_layers: 2
+  num_bases: 8
+  dropout: 0.1
+
+train:
+  steps: 20000
+  batch_size: 32768
+  neg_per_pos: 8
+  message_edges: 2000000
+  lr: 0.001
+  seed: 0
+  fsdp: false
+  log_every: 200
+  checkpoint: checkpoints/gpu.pt
+
+agent:
+  model: claude-opus-5-5
+  effort: high

@@ -1,0 +1,11 @@
+# Only the top-level data dir: a bare "data/" would also exclude rewind/data/, the KG module.
+/data/
+/checkpoints/
+/logs/*.pt
+__pycache__/
+*.egg-info/
+.venv/
+.pytest_cache/
+.DS_Store
+.claude/settings.local.json
+configs/bench.yaml

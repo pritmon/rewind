@@ -1,0 +1,16 @@
+Rediscovery: 3 held-out genes (4 edges), ranked among 27,531 genes with no known link to the targets
+
+gene              model rank     degree baseline    random
+SOX2            438 (top  1.6%)               1,033    13,766
+POU5F1          564 (top  2.0%)               8,287    13,766
+KLF4            194 (top  0.7%)               1,099    13,766
+
+hits@10   model 0/3   degree 0/3
+hits@50   model 0/3   degree 0/3
+hits@100  model 0/3   degree 0/3
+
+Leak control: targets widened 1 hop(s) to 13 related terms; 1 extra gene->term edges removed.
+Supporting path for each gene (check none is a restatement of the hidden fact):
+  SOX2     SOX2 --[disease_protein]--> oligoastrocytoma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.95)
+  POU5F1   POU5F1 --[bioprocess_protein]--> positive regulation of transcription by RNA polymerase II --[bioprocess_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)
+  KLF4     KLF4 --[molfunc_protein]--> beta-catenin binding --[molfunc_protein]--> MED12 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.94)

@@ -1,0 +1,21 @@
+
+SOX2:
+   SOX2 --[disease_protein]--> oligoastrocytoma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.95)
+   SOX2 --[disease_protein]--> giant cell glioblastoma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.95)
+   SOX2 --[disease_protein]--> ependymoblastoma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.94)
+   SOX2 --[disease_protein]--> anaplastic oligodendroglioma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.94)
+   SOX2 --[disease_protein]--> astroblastoma --[disease_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.94)
+
+POU5F1:
+   POU5F1 --[bioprocess_protein]--> positive regulation of transcription by RNA polymerase II --[bioprocess_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)
+   POU5F1 --[bioprocess_protein]--> regulation of transcription by RNA polymerase II --[bioprocess_protein]--> MED6 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.92)
+   POU5F1 --[protein_protein]--> MAPK1 --[protein_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.92)
+   POU5F1 --[bioprocess_protein]--> regulation of transcription by RNA polymerase II --[bioprocess_protein]--> MED27 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.91)
+   POU5F1 --[molfunc_protein]--> DNA binding --[molfunc_protein]--> SMC1A --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.90)
+
+KLF4:
+   KLF4 --[molfunc_protein]--> beta-catenin binding --[molfunc_protein]--> MED12 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.94)
+   KLF4 --[bioprocess_protein]--> positive regulation of transcription, DNA-templated --[bioprocess_protein]--> MED12 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)
+   KLF4 --[molfunc_protein]--> beta-catenin binding --[molfunc_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)
+   KLF4 --[bioprocess_protein]--> negative regulation of gene expression --[bioprocess_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)
+   KLF4 --[protein_protein]--> CREBBP --[protein_protein]--> CTNNB1 --[bioprocess_protein]--> stem cell population maintenance  (confidence 0.93)

@@ -1,0 +1,38 @@
+data:
+  csv: data/kg.csv              # raw PrimeKG edge list (scripts/download_primekg.sh)
+  processed: data/primekg.pt    # output of `python -m rewind.data.kg build`
+
+# The magic test: every edge between these genes and these terms is deleted
+# before training. The model must find its way back to them on its own.
+holdout:
+  genes: [POU5F1, SOX2, KLF4, MYC]          # Yamanaka factors (OSKM)
+  targets:
+    - stem cell population maintenance
+    - somatic stem cell population maintenance
+    - cellular senescence
+    - cell aging
+  relation: bioprocess_protein               # relation used to score gene -> term links
+  # Also hide links to ontology neighbours of the targets (e.g. "neuronal stem cell population
+  # maintenance"), so a near-synonym cannot hand the model the hidden answer. 0 disables.
+  expand_hops: 1
+
+model:
+  dim: 128
+  num_layers: 2
+  num_bases: 8
+  dropout: 0.1
+
+train:
+  steps: 20000
+  batch_size: 8192          # positive triples per step, per GPU
+  neg_per_pos: 4            # type-aware negatives per positive
+  message_edges: 1000000    # edges sampled for message passing each step
+  lr: 0.001
+  seed: 0
+  fsdp: false               # true = shard with FSDP instead of DDP (multi-GPU only)
+  log_every: 100
+  checkpoint: checkpoints/rewind.pt
+
+agent:
+  model: claude-opus-5-5
+  effort: high
